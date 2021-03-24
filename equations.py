@@ -1,5 +1,7 @@
 
 def power(x,a):
+    if x<0:
+        return 0
     b=1.0
     if a>=0 :
         i=a
@@ -50,7 +52,7 @@ def XtimesY(x:float,y:float) -> float:
             return 0.0
         else:
             ans = exponent(ln(x)*y)
-            return float('%0.6f' % ans)
+            return float(ans)
     except:
         return(0.0)
     
@@ -59,7 +61,7 @@ def sqrt(x:float,y:float) -> float:
         if (y>0 and x!=0):
             x=1/x
             a=(XtimesY(y,x))
-            return float('%0.6f' %a)
+            return float(a)
         else:
             return(0.0)
     except:
@@ -70,19 +72,19 @@ def calculate(x):
         if x<=0 :
             return 0.0
         ans= exponent(x)*power(7,x)*power(x,-1)*sqrt(x,x)
-        ans1= float('%0.6f' %ans)
+        ans1= float(ans)
         return ans1
     except:
         return (0.0)
-print(calculate(0))
+
    
-# try:
+try:
     num=input("Enter a num: ")
-    num= float(num)
-    ans=calculate(num)
-    return float('%0.6f' %ans)
-# except:
-#     return 0.0
+    num1= float(num)
+    ans= calculate(num1)
+    print(float(ans))
+except:
+    print(0.0)
     
 
 
