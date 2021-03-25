@@ -45,7 +45,7 @@ def Ln(x:float) -> float:
             y_n=y_n1
     except:
             return(0.0)
-        
+      
 def XtimesY(x:float,y:float) -> float:
     try:
         if (x<=0):
@@ -77,7 +77,6 @@ def calculate(x):
     except:
         return (0.0)
 
-print(Ln(1.5))  
 # try:
 #     num=input("Enter a num: ")
 #     num1= float(num)
