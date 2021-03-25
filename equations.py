@@ -41,11 +41,11 @@ def Ln(x:float) -> float:
             ex = exponent(y_n)
             y_n1 = y_n+2*((x-ex)/(x+ex))
             if (y_n-y_n1) <= 0.001 and (y_n1-y_n) <= 0.001:
-                return float('%0.6f' %y_n1)
+                return float('%0.5f' %y_n1)
             y_n=y_n1
     except:
             return(0.0)
-print(Ln(1.5))      
+     
 def XtimesY(x:float,y:float) -> float:
     try:
         if (x<=0):
