@@ -1,20 +1,20 @@
 
-def power(x,a):
-    if x<0:
-        return 0
-    b=1.0
-    if a>=0 :
-        i=a
-        while i>0:
-            b=b*x
-            i=i-1
-        return float(b)
-    elif a<=0:
-         i=a*(-1)
-         while i>0:
-            b=b*x
-            i=i-1
-         return float(1/b)
+# def power(x,a):
+#     if x<0:
+#         return 0
+#     b=1.0
+#     if a>=0 :
+#         i=a
+#         while i>0:
+#             b=b*x
+#             i=i-1
+#         return float(b)
+#     elif a<=0:
+#          i=a*(-1)
+#          while i>0:
+#             b=b*x
+#             i=i-1
+#          return float(1/b)
 
 def assembly(x):
     if x<0:
