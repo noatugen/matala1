@@ -41,7 +41,7 @@ def Ln(x:float) -> float:
             ex = exponent(y_n)
             y_n1 = y_n+2*((x-ex)/(x+ex))
             if (y_n-y_n1) <= 0.001 and (y_n1-y_n) <= 0.001:
-                return float(y_n1)
+                return float('%0.6f' %y_n1)
             y_n=y_n1
     except:
             return(0.0)
@@ -52,7 +52,7 @@ def XtimesY(x:float,y:float) -> float:
             return 0.0
         else:
             ans = exponent(Ln(x)*y)
-            return float(ans)
+            return float('%0.4f' %ans)
     except:
         return(0.0)
     
