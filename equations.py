@@ -1,20 +1,20 @@
 
-# def power(x,a):
-#     if x<0:
-#         return 0
-#     b=1.0
-#     if a>=0 :
-#         i=a
-#         while i>0:
-#             b=b*x
-#             i=i-1
-#         return float(b)
-#     elif a<=0:
-#          i=a*(-1)
-#          while i>0:
-#             b=b*x
-#             i=i-1
-#          return float(1/b)
+def power(x,a):
+    if x<0:
+        return 0
+    b=1.0
+    if a>=0 :
+        i=a
+        while i>0:
+            b=b*x
+            i=i-1
+        return float(b)
+    elif a<=0:
+          i=a*(-1)
+          while i>0:
+            b=b*x
+            i=i-1
+          return float(1/b)
 
 def assembly(x):
     if x<0:
@@ -31,19 +31,7 @@ def exponent(x):
     for i in range(1,n+1):
         e=e+power(x, i)/assembly(i)
     return e
-# def Ln(x):
-#     try:
-#         if (x<=0):
-#             return (0.0)
-#         else:
-#             yn=0
-#             b=x-1.0
-#             while ((yn-b)>0.001 or (b-yn)>0.001):
-#                 yn=b
-#                 b=b+2*((x-exponent(b))/(x+exponent(b)))
-#             return b
-#     except:
-#         return(0.0)
+
 def Ln(x:float) -> float:
     try:
         if x<= 0:
@@ -53,11 +41,10 @@ def Ln(x:float) -> float:
             ex = exponent(y_n)
             y_n1 = y_n+2*((x-ex)/(x+ex))
             if (y_n-y_n1) <= 0.001 and (y_n1-y_n) <= 0.001:
-                return 0.4054
+                return y_n1
             y_n=y_n1
     except:
-            return(0.0)    
-     
+            return(0.0)      
 def XtimesY(x:float,y:float) -> float:
     try:
         if (x<=0):
