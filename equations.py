@@ -32,20 +32,20 @@ def exponent(x):
         e=e+power(x, i)/assembly(i)
     return e
 
-def Ln(x):
+def Ln(x:float) -> float:
     try:
-        if (x<=0):
-            return (0.0)
-        else:
-            yn=0
-            b=x-1.0
-            while ((yn-b)>0.001 or (b-yn)>0.001):
-                yn=b
-                b=b+2*((x-exponent(b))/(x+exponent(b)))
-            return float(b)
+        if x<= 0:
+            return 0.0
+        y_n = x-1.0
+        while True:
+            ex = exponent(y_n)
+            y_n1 = y_n+2*((x-ex)/(x+ex))
+            if (y_n-y_n1) <= 0.001 and (y_n1-y_n) <= 0.001:
+                return float(y_n1)
+            y_n=y_n1
     except:
-        return(0.0)
-      
+            return(0.0)
+print(Ln(1.5))      
 def XtimesY(x:float,y:float) -> float:
     try:
         if (x<=0):
