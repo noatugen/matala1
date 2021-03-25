@@ -78,13 +78,13 @@ def calculate(x):
         return (0.0)
 
    
-try:
-    num=input("Enter a num: ")
-    num1= float(num)
-    ans= calculate(num1)
-    print(float(ans))
-except:
-    print(0.0)
+# try:
+#     num=input("Enter a num: ")
+#     num1= float(num)
+#     ans= calculate(num1)
+#     print(float(ans))
+# except:
+
     
 
 
