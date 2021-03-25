@@ -32,7 +32,7 @@ def exponent(x):
         e=e+power(x, i)/assembly(i)
     return e
 
-def Ln(x):
+def Ln(x:float) -> float:
     try:
         if x<= 0:
             return 0.0
@@ -77,7 +77,7 @@ def calculate(x):
     except:
         return (0.0)
 
-   
+print(Ln(1.5))  
 # try:
 #     num=input("Enter a num: ")
 #     num1= float(num)
