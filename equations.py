@@ -32,7 +32,7 @@ def exponent(x):
         e=e+power(x, i)/assembly(i)
     return e
 
-def ln(x):
+def Ln(x):
     try:
         if x<= 0:
             return 0.0
@@ -51,7 +51,7 @@ def XtimesY(x:float,y:float) -> float:
         if (x<=0):
             return 0.0
         else:
-            ans = exponent(ln(x)*y)
+            ans = exponent(Ln(x)*y)
             return float(ans)
     except:
         return(0.0)
